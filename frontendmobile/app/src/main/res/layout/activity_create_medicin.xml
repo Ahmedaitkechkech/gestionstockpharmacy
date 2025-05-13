@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom du médicament" />
+
+    <EditText
+        android:id="@+id/input_categorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Catégorie" />
+
+    <EditText
+        android:id="@+id/input_seuil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seuil d'alerte"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer" />
+</LinearLayout>

@@ -4,39 +4,33 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btn_users"
+    <EditText
+        android:id="@+id/input_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Utilisateurs" />
+        android:hint="Nom d'utilisateur" />
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:inputType="textPassword" />
+
+    <Spinner
+        android:id="@+id/spinner_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btn_medicins"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Médicaments" />
-
-    <Button
-        android:id="@+id/btn_lots"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lots" />
-
-    <Button
-        android:id="@+id/btn_alertes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alertes" />
-
-    <Button
-        android:id="@+id/btn_logs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logs" />
-
-    <Button
-        android:id="@+id/btn_mouvements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mouvements" />
+        android:text="Enregistrer" />
 </LinearLayout>

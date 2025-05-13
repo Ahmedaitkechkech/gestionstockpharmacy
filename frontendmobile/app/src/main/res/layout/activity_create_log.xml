@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Action (ex: Connexion utilisateur)" />
+
+    <EditText
+        android:id="@+id/input_date_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date de l'action (ex: 2024-05-10T10:00:00)" />
+
+    <EditText
+        android:id="@+id/input_utilisateur_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID de l'utilisateur" />
+
+    <Button
+        android:id="@+id/btn_save_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer" />
+</LinearLayout>

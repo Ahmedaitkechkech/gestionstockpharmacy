@@ -1,6 +1,9 @@
 package ma.emsi.frontendmobile.models;
 
 import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +16,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Log {
+public class Log implements Serializable {
     @SerializedName("id")
     private long id;
 

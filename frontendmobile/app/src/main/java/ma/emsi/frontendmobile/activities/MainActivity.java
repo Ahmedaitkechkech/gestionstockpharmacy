@@ -1,6 +1,8 @@
 package ma.emsi.frontendmobile.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,13 +13,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
+    public void openUserList(View view) {
+        startActivity(new Intent(this, UserListActivity.class));
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+    public void openMedicinList(View view) {
+        startActivity(new Intent(this, MedicinListActivity.class));
+    }
 
-
+    public void openAlerteList(View view) {
+        startActivity(new Intent(this, AlerteListActivity.class));
     }
 }

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">frontendmobile</string>
+    <!-- Types de mouvement -->
+    <string-array name="type_mouvement_array">
+        <item>ENTREE</item>
+        <item>SORTIE</item>
+    </string-array>
+
+    <!-- Types d'alerte -->
+    <string-array name="type_alerte_array">
+        <item>STOCK_LOW</item>
+        <item>EXPIRING_SOON</item>
+    </string-array>
+
+    <string-array name="roles_array">
+        <item>ADMIN</item>
+        <item>EMPLOYEE</item>
+    </string-array>
 </resources>

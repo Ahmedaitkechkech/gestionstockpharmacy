@@ -4,39 +4,38 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btn_users"
+    <Spinner
+        android:id="@+id/spinner_type_alerte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/input_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Utilisateurs" />
+        android:hint="Message" />
+
+    <CheckBox
+        android:id="@+id/check_resolue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résolue" />
+
+    <EditText
+        android:id="@+id/input_date_alerte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date de l'alerte (ex: 2024-05-10T10:00:00)" />
+
+    <EditText
+        android:id="@+id/input_lot_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID du lot" />
 
     <Button
-        android:id="@+id/btn_medicins"
+        android:id="@+id/btn_save_alerte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Médicaments" />
-
-    <Button
-        android:id="@+id/btn_lots"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lots" />
-
-    <Button
-        android:id="@+id/btn_alertes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alertes" />
-
-    <Button
-        android:id="@+id/btn_logs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logs" />
-
-    <Button
-        android:id="@+id/btn_mouvements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mouvements" />
+        android:text="Enregistrer" />
 </LinearLayout>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_motif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Motif (ex: Réapprovisionnement)" />
+
+    <EditText
+        android:id="@+id/input_date_mouvement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date du mouvement (ex: 2024-05-10T10:00:00)" />
+
+    <Spinner
+        android:id="@+id/spinner_type_mouvement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/input_lot_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID du lot" />
+
+    <EditText
+        android:id="@+id/input_utilisateur_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID de l'utilisateur" />
+
+    <EditText
+        android:id="@+id/input_quantite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantité"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_save_mouvement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer" />
+</LinearLayout>

@@ -4,39 +4,40 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btn_users"
+    <EditText
+        android:id="@+id/input_numero_lot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Utilisateurs" />
+        android:hint="Numéro du lot" />
+
+    <EditText
+        android:id="@+id/input_date_expiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date d'expiration (ex: 2025-12-31)" />
+
+    <EditText
+        android:id="@+id/input_quantite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantité"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/input_date_entree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date d'entrée (ex: 2024-05-10T10:00:00)" />
+
+    <EditText
+        android:id="@+id/input_medicin_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID du médicament" />
 
     <Button
-        android:id="@+id/btn_medicins"
+        android:id="@+id/btn_save_lot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Médicaments" />
-
-    <Button
-        android:id="@+id/btn_lots"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lots" />
-
-    <Button
-        android:id="@+id/btn_alertes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alertes" />
-
-    <Button
-        android:id="@+id/btn_logs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logs" />
-
-    <Button
-        android:id="@+id/btn_mouvements"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mouvements" />
+        android:text="Enregistrer" />
 </LinearLayout>
