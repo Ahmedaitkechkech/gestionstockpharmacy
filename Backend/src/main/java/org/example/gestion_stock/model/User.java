@@ -10,17 +10,26 @@ public class User {
     private String username;
     private String passwordHash;
     private String email;
-
+    private String statut ;
     @Enumerated(EnumType.STRING)
     private Role role;
 
     public User(){}
-    public User(long id, String username, String passwordHash, String email, Role role) {
+    public User(long id, String username, String passwordHash, String email, String statut ,   Role role) {
         this.id = id;
         this.username = username;
         this.passwordHash = passwordHash;
         this.email = email;
+        this.statut = statut;
         this.role = role;
+    }
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
     }
 
     public String getEmail() {

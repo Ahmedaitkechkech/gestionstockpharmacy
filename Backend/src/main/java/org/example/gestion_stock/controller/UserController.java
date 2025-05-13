@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/users")
 public class UserController {
 
@@ -30,4 +32,6 @@ public class UserController {
     public User getUser(@PathVariable Long id) {
         return userrepo.findById(id).get();
     }
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody User updatedUser) { return this.userrepo.save(updatedUser); }
 }

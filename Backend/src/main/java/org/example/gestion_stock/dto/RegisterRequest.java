@@ -6,6 +6,16 @@ public class RegisterRequest {
     private String username;
     private String password;
     private String email;
+
+    public String getStatut() {
+        return statut;
+    }
+
+    public void setStatut(String statut) {
+        this.statut = statut;
+    }
+
+    private String statut;
     private Role role;
 
     public String getUsername() {
