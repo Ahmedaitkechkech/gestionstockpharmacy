@@ -8,35 +8,41 @@
         android:id="@+id/btn_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Utilisateurs" />
+        android:text="Utilisateurs"
+        android:onClick="openUsersActivity" />
 
     <Button
         android:id="@+id/btn_medicins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Médicaments" />
+        android:text="Médicaments"
+        android:onClick="openMedicinsActivity" />
 
     <Button
         android:id="@+id/btn_lots"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lots" />
+        android:text="Lots"
+        android:onClick="openLotsActivity" />
 
     <Button
         android:id="@+id/btn_alertes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alertes" />
+        android:text="Alertes"
+        android:onClick="openAlertesActivity" />
 
     <Button
         android:id="@+id/btn_logs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logs" />
+        android:text="Logs"
+        android:onClick="openLogsActivity" />
 
     <Button
         android:id="@+id/btn_mouvements"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mouvements" />
+        android:text="Mouvements"
+        android:onClick="openMouvementsActivity" />
 </LinearLayout>

@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 public enum Role {
     @SerializedName("PHARMACIEN")
     PHARMACIEN,
-
     @SerializedName("RESPONSABLE")
-    SRESPONSABLEORTIE,
+    RESPONSABLE,
 }

@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName;
 public enum TypeAlert {
     @SerializedName("STOCK")
     STOCK,
-
     @SerializedName("EXPIRATION")
     EXPIRATION,
 

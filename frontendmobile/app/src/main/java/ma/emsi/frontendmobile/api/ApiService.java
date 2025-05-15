@@ -3,10 +3,13 @@ package ma.emsi.frontendmobile.api;
 import java.util.List;
 
 import ma.emsi.frontendmobile.models.Alerte;
+import ma.emsi.frontendmobile.models.auth.AuthRequest;
+import ma.emsi.frontendmobile.models.auth.AuthResponse;
 import ma.emsi.frontendmobile.models.Log;
 import ma.emsi.frontendmobile.models.Lot;
 import ma.emsi.frontendmobile.models.Medicin;
 import ma.emsi.frontendmobile.models.MouvementStock;
+import ma.emsi.frontendmobile.models.auth.RegisterRequest;
 import ma.emsi.frontendmobile.models.User;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -19,133 +22,92 @@ import retrofit2.http.Path;
 // Centralise tous les endpoints de l'API dans une seule interface.
 public interface ApiService {
     // ---------------------------------------------------------------------
-    // User
-    // Créer un utilisateur
-    @POST("users")
-    Call<User> createUser(@Body User user);
+    // ----------------------- Connexion & Register ------------------------
+    @POST("auth/login")
+    Call<AuthResponse> login(@Body AuthRequest request);
+    @POST("auth/register")
+    Call<String> register(@Body RegisterRequest request);
+    // ---------------------------------------------------------------------
 
-    // Supprimer un utilisateur par ID
+    // ---------------------------------------------------------------------
+    // ------------------------------- User --------------------------------
+    @POST("users")
+    Call<User> createUser(@Body User newUser);
     @DELETE("users/{id}")
     Call<Void> deleteUser(@Path("id") Long id);
-
-    // Récupérer tous les utilisateurs
     @GET("users")
     Call<List<User>> getAllUsers();
-
-    // Récupérer un utilisateur par ID
     @GET("users/{id}")
     Call<User> getUserById(@Path("id") Long id);
+    @PUT("users/{id}")
+    Call<User> updateUser(@Path("id") Long id, @Body User updatedUser);
     // ---------------------------------------------------------------------
 
     // ---------------------------------------------------------------------
-    // MouvementStock
-    // Créer un mouvement de stock
+    // -------------------------- MouvementStock ---------------------------
     @POST("mouvements")
-    Call<MouvementStock> createMouvement(@Body MouvementStock mouvement);
-
-    // Récupérer tous les mouvements
+    Call<MouvementStock> createMouvement(@Body MouvementStock mouvementStock);
     @GET("mouvements")
     Call<List<MouvementStock>> getAllMouvements();
-
-    // Récupérer un mouvement par ID
     @GET("mouvements/{id}")
     Call<MouvementStock> getMouvementById(@Path("id") Long id);
-
-    // Mettre à jour un mouvement
     @PUT("mouvements/{id}")
-    Call<MouvementStock> updateMouvement(@Path("id") Long id, @Body MouvementStock mouvement);
-
-    // Supprimer un mouvement
+    Call<MouvementStock> updateMouvement(@Path("id") Long id, @Body MouvementStock mouvementStock);
     @DELETE("mouvements/{id}")
     Call<Void> deleteMouvement(@Path("id") Long id);
     // ---------------------------------------------------------------------
 
     // ---------------------------------------------------------------------
-    // Log
-    // Créer un log
+    // -------------------------------- Log --------------------------------
     @POST("log")
     Call<Log> createLog(@Body Log log);
-
-    // Récupérer tous les logs
     @GET("log")
     Call<List<Log>> getAllLogs();
-
-    // Récupérer un log par ID
     @GET("log/{id}")
     Call<Log> getLogById(@Path("id") Long id);
-
-    // Mettre à jour un log
     @PUT("log/{id}")
     Call<Log> updateLog(@Path("id") Long id, @Body Log log);
-
-    // Supprimer un log
     @DELETE("log/{id}")
     Call<Void> deleteLog(@Path("id") Long id);
     // ---------------------------------------------------------------------
 
     // ---------------------------------------------------------------------
-    // Lot
-    // Créer un lot
+    // -------------------------------- Lot --------------------------------
     @POST("lots")
     Call<Lot> createLot(@Body Lot lot);
-
-    // Récupérer tous les lots
     @GET("lots")
     Call<List<Lot>> getAllLots();
-
-    // Récupérer un lot par ID
     @GET("lots/{id}")
     Call<Lot> getLotById(@Path("id") Long id);
-
-    // Mettre à jour un lot
     @PUT("lots/{id}")
     Call<Lot> updateLot(@Path("id") Long id, @Body Lot lot);
-
-    // Supprimer un lot
     @DELETE("lots/{id}")
     Call<Void> deleteLot(@Path("id") Long id);
     // ---------------------------------------------------------------------
 
     // ---------------------------------------------------------------------
-    // Medicin
-    // Créer un médicament
+    // ------------------------------ Medicin ------------------------------
     @POST("medicins")
-    Call<Medicin> createMedicin(@Body Medicin medicin);
-
-    // Récupérer tous les médicaments
+    Call<Medicin> createMedicin(@Body Medicin newMedicin);
     @GET("medicins")
     Call<List<Medicin>> getAllMedicins();
-
-    // Récupérer un médicament par ID
     @GET("medicins/{id}")
     Call<Medicin> getMedicinById(@Path("id") Long id);
-
-    // Supprimer un médicament par ID
     @DELETE("medicins/{id}")
     Call<Void> deleteMedicin(@Path("id") Long id);
     // ---------------------------------------------------------------------
 
     // ---------------------------------------------------------------------
-    // Alerte
-    // Créer une alerte
+    // ------------------------------- Alerte ------------------------------
     @POST("alertes")
     Call<Alerte> createAlerte(@Body Alerte alerte);
-
-    // Récupérer toutes les alertes
     @GET("alertes")
     Call<List<Alerte>> getAllAlertes();
-
-    // Récupérer une alerte par ID
     @GET("alertes/{id}")
     Call<Alerte> getAlerteById(@Path("id") Long id);
-
-    // Mettre à jour une alerte
     @PUT("alertes/{id}")
     Call<Alerte> updateAlerte(@Path("id") Long id, @Body Alerte alerte);
-
-    // Supprimer une alerte
     @DELETE("alertes/{id}")
     Call<Void> deleteAlerte(@Path("id") Long id);
     // ---------------------------------------------------------------------
-
 }

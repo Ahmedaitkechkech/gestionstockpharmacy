@@ -13,39 +13,34 @@ import java.util.List;
 
 import ma.emsi.frontendmobile.R;
 import ma.emsi.frontendmobile.adapters.UserAdapter;
+import ma.emsi.frontendmobile.models.Statut;
 import ma.emsi.frontendmobile.models.User;
 import ma.emsi.frontendmobile.models.Role;
 
 public class UserListActivity extends AppCompatActivity {
     private List<User> userList = new ArrayList<>(Arrays.asList(
-            new User(1, "Alice", "alice@example.com", Role.SRESPONSABLEORTIE),
-            new User(2, "Bob", "bob@example.com", Role.PHARMACIEN)
+            new User(1, "Alice", "hash123", "alice@example.com", Role.RESPONSABLE, Statut.ACTIF),
+            new User(2, "Bob", "hash456", "bob@example.com", Role.PHARMACIEN, Statut.ACTIF)
     ));
+
+    private RecyclerView recyclerView; // ✅ Déclaration au niveau de la classe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView); // ✅ Initialisation
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        // Utiliser UserAdapter au lieu de SimpleAdapter
-        UserAdapter adapter = new UserAdapter(userList, user -> {
-            // Naviguer vers un écran de détail (optionnel)
-            // Intent intent = new Intent(UserListActivity.this, UserDetailActivity.class);
-            // intent.putExtra("user", user);
-            // startActivity(intent);
-        });
-
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(new UserAdapter(userList, user -> {
+            // Naviguer vers un écran de détail
+        }));
     }
 
     public void addUser(View view) {
-        // Créer un nouvel utilisateur fictif
         User newUser = new User(
-                userList.size() + 1,
                 "Utilisateur " + (userList.size() + 1),
+                "password",
                 "email" + (userList.size() + 1) + "@example.com",
                 Role.PHARMACIEN
         );

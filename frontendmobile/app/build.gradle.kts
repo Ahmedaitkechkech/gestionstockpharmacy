@@ -45,6 +45,5 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.github.bumptech.glide:glide:4.14.2")
     implementation("androidx.recyclerview:recyclerview:1.3.0")
-    implementation("org.projectlombok:lombok:1.18.24")
-    annotationProcessor("org.projectlombok:lombok:1.18.26")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }
